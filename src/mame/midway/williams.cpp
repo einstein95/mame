@@ -2484,6 +2484,29 @@ ROM_START( stargate ) /* "B" ROMs labeled 3002-13 through 3002-24, identical dat
 	ROM_LOAD( "decoder_rom_5.3c", 0x0200, 0x0200, CRC(f921c5fe) SHA1(9cebb8bb935315101d248140d1b4503993ebdf8a) ) // Universal Vertical decoder ROM - 7641-5 BPROM - P/N A-5342-09695
 ROM_END
 
+ROM_START( defender2 )
+	ROM_REGION( 0x19000, "maincpu", 0 )
+	ROM_LOAD( "defender2-10", 0x0d000, 0x1000, CRC(4d82fc2f) SHA1(b11dc3f3f2100ab14ad5b26cd333b212c454cc8d) )
+	ROM_LOAD( "defender2-11", 0x0e000, 0x1000, CRC(561fad3f) SHA1(597851e78423f30341f682f3fc62bf24cf9e8a91) )
+	ROM_LOAD( "defender2-12", 0x0f000, 0x1000, CRC(836eacca) SHA1(f788fc2a25adffa21e02a3dfe2074e8719405200) )
+	ROM_LOAD( "defender2-1",  0x10000, 0x1000, CRC(079ff167) SHA1(421f44741ad102a8b21beae8014dac42991b78d1) )
+	ROM_LOAD( "defender2-2",  0x11000, 0x1000, CRC(afc614c5) SHA1(087c6da93318e8dc922d3d22e0a2af7b9759701c) )
+	ROM_LOAD( "defender2-3",  0x12000, 0x1000, CRC(6dd57970) SHA1(1fdee9180bfb835f35ac786116e0f8d7833f2c3f) )
+	ROM_LOAD( "defender2-4",  0x13000, 0x1000, CRC(a8b4bf0f) SHA1(6b4d47c2899fe9f14f9dab5928499f12078c437d) )
+	ROM_LOAD( "defender2-5",  0x14000, 0x1000, CRC(2d306074) SHA1(54f871983699113e31bb756d4ca885c26c2d66b4) )
+	ROM_LOAD( "defender2-6",  0x15000, 0x1000, CRC(53598dde) SHA1(54b02d944caf95283c9b6f0160e75ea8c4ccc97b) )
+	ROM_LOAD( "defender2-7",  0x16000, 0x1000, CRC(55b5b0d2) SHA1(dcf392a899fb6c225c4e31034e242e575c3dc94d) )
+	ROM_LOAD( "defender2-8",  0x17000, 0x1000, CRC(b4f22d4d) SHA1(2486e895628df9ae1268d9eb2434f240dba99f70) )
+	ROM_LOAD( "defender2-9",  0x18000, 0x1000, CRC(6df7463d) SHA1(b80c2872fc47b4b604967f176e3931cd992dd692) )
+
+	ROM_REGION( 0x10000, "soundcpu", 0 )
+	ROM_LOAD( "video_sound_rom_2_std_744.ic12", 0xf800, 0x0800, CRC(2fcf6c4d) SHA1(9c4334ac3ff15d94001b22fc367af40f9deb7d57) ) // P/N A-5342-09809
+
+	ROM_REGION( 0x0400, "proms", 0 )
+	ROM_LOAD( "decoder_rom_4.3g", 0x0000, 0x0200, CRC(e6631c23) SHA1(9988723269367fb44ef83f627186a1c88cf7877e) ) // Universal Horizontal decoder ROM - 7641-5 BPROM - P/N A-5342-09694
+	ROM_LOAD( "decoder_rom_5.3c", 0x0200, 0x0200, CRC(f921c5fe) SHA1(9cebb8bb935315101d248140d1b4503993ebdf8a) ) // Universal Vertical decoder ROM - 7641-5 BPROM - P/N A-5342-09695
+ROM_END
+
 
 /*
 
@@ -3834,6 +3857,7 @@ GAME( 1982, jin,        0,        jin,            jin,      defender_state,  emp
 
 // Standard Williams hardware
 GAME( 1981, stargate,   0,        williams_b0,    stargate, williams_state,  empty_init,    ROT0,   "Williams / Vid Kidz", "Stargate", MACHINE_SUPPORTS_SAVE )
+GAME( 1995, defender2,  stargate, williams_b0,    stargate, williams_state,  empty_init,    ROT0,   "Williams / Vid Kidz", "Defender II", MACHINE_SUPPORTS_SAVE )
 
 GAME( 1982, conquest,   0,        williams_b1,    conquest, conquest_state,  empty_init,    ROT270, "Williams / Vid Kidz", "Conquest (prototype)", MACHINE_IS_INCOMPLETE | MACHINE_SUPPORTS_SAVE )
 
